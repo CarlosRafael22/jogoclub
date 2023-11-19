@@ -15,7 +15,8 @@ const MilestoneWrapper = styled.div`
 `
 
 const getIconSize = (size: string) => ({
-    s: '8px',
+    xs: '8px',
+    s: '14px',
     m: '20px',
     l: '24px'
 }[size])
