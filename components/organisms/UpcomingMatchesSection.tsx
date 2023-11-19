@@ -1,46 +1,54 @@
 import styled from "styled-components";
-import UpcomingMatch from "@/molecules/UpcomingMatch";
+import DetailedUpcomingMatch from '@/molecules/DetailedUpcomingMatch';
 
 const UpcomingMatchesWrapper = styled.div`
-    width: 80%;
+    width: 90%;
     margin: auto;
     margin-top: 16px;
 `
 
+const UpcomingMatchesContent = styled.div`
+    border-left: 3px solid black;
+`
+
 const UpcomingMatchesHeader = styled.p`
-    font-size: 20px;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: -12px;
 `
 
 const UpcomingMatchesSection = () => {
     return (
         <UpcomingMatchesWrapper>
             <UpcomingMatchesHeader>Próximos jogos:</UpcomingMatchesHeader>
-            <UpcomingMatch
-                teamA='AS Roma'
-                teamB='Udinese'
-                date='26/11/2023'
-                championship='Serie A'
-                confirmed
-            />
-            <UpcomingMatch
-                teamA='Lazio'
-                teamB='Celtic'
-                date='28/11/2023'
-                championship='Champions League'
-            />
-            <UpcomingMatch
-                teamA='FC Bayern'
-                teamB='FC Copenhagen'
-                date='29/11/2023'
-                championship='Champions League'
-                confirmed
-            />
-            <UpcomingMatch
-                teamA='Atletico de Madrid'
-                teamB='Man. United'
-                date='29/11/2023'
-                championship='Champions League'
-            />
+            <UpcomingMatchesContent>
+                <DetailedUpcomingMatch
+                    teamA='AS Roma'
+                    teamB='Udinese'
+                    date='26/11'
+                    championship='Serie A'
+                    time='18:00'
+                    stadium='Stadio Olimpico'
+                    confirmed
+                />
+                <DetailedUpcomingMatch
+                    teamA='Lazio'
+                    teamB='Celtic'
+                    date='28/11'
+                    championship='Champions League'
+                    time='18:45'
+                    stadium='Stadio Olimpico'
+                />
+                <DetailedUpcomingMatch
+                    teamA='FC Bayern'
+                    teamB='FC Copenhagen'
+                    date='29/11'
+                    championship='Champions League'
+                    time='21:00'
+                    stadium='Allianz Arena'
+                    confirmed
+                />
+            </UpcomingMatchesContent>
         </UpcomingMatchesWrapper>
     )
 }
