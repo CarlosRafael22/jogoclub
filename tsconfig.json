@@ -5,7 +5,8 @@
       "@/atoms/*": ["components/atoms/*"],
       "@/molecules/*": ["components/molecules/*"],
       "@/organisms/*": ["components/organisms/*"],
-      "@/pages/*": ["components/pages/*"]
+      "@/pages/*": ["components/pages/*"],
+      "@/helpers/*": ["helper/*"]
     },
     "target": "es5",
     "module": "esnext",
