@@ -10,8 +10,8 @@ const SocialMediaSectionWrapper = styled.div`
 const SocialMediaSection = () => {
     return (
         <SocialMediaSectionWrapper>
-            <SocialMediaLink href={'https://www.youtube.com/@maisumdiadejogo/videos'} $logo={SOCIAL_MEDIA_LOGO_MAPPING.instagram} />
-            <SocialMediaLink href={'https://www.instagram.com/maisumdiadejogo/'} $logo={SOCIAL_MEDIA_LOGO_MAPPING.youtube} />
+            <SocialMediaLink href={'https://www.instagram.com/maisumdiadejogo/'} $logo={SOCIAL_MEDIA_LOGO_MAPPING.instagram} />
+            <SocialMediaLink href={'https://www.youtube.com/@maisumdiadejogo/videos'} $logo={SOCIAL_MEDIA_LOGO_MAPPING.youtube} />
             <SocialMediaLink href={'https://www.tiktok.com/@maisumdiadejogo'} $logo={SOCIAL_MEDIA_LOGO_MAPPING.tiktok} />
         </SocialMediaSectionWrapper>
     )
