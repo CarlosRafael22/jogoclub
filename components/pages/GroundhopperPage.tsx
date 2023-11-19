@@ -8,8 +8,8 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 32px;
-    background-color: #fafafa;
+    margin-top: 16px;
+    background-color: #f4f4f4;
 `
 
 const GroundhopperPage = () => {
