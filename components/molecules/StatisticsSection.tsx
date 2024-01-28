@@ -1,6 +1,5 @@
 import styled from 'styled-components'
-import Milestone from './Milestone'
-import { useEffect, useRef, useState } from 'react'
+import BoxTextStat from './BoxTextStat'
 
 const StatisticsWrapper = styled.div`
     width: 90%;
@@ -148,62 +147,15 @@ const CountriesSection = () => {
     )
 }
 
-/**
- * Hook that alerts clicks outside of the passed ref
- */
-function useOutsideAlerter(ref, callback) {
-    useEffect(() => {
-      /**
-       * Alert if clicked on outside of element
-       */
-      function handleClickOutside(event) {
-        if (ref.current && !ref.current.contains(event.target)) {
-          console.log("You clicked outside of me!");
-          callback();
-        }
-      }
-      // Bind the event listener
-      document.addEventListener("mousedown", handleClickOutside);
-      return () => {
-        // Unbind the event listener on clean up
-        document.removeEventListener("mousedown", handleClickOutside);
-      };
-    }, [ref]);
-  }
-
-const StatisticsSection = () => {
-    const wrapperRef = useRef(null);
-    useOutsideAlerter(wrapperRef, () => setFocusedStat(undefined));
-    const [focusedStat, setFocusedStat] = useState<string | undefined>();
-
-    const handleClick = (clickedStat: string) => {
-        setFocusedStat(clickedStat)
-    }
- 
-    const displayFocusedStat = () => ({
-        matches: <SeenClubsSection seenClubs={seenClubs} />,
-        stadiums: <StadiumListSection stadiumsList={stadiumsList} />,
-        countries: <CountriesSection />
-    }[focusedStat])
-
-    return (
+const StatisticsSection = () => (
         <StatisticsWrapper>
             <MainContent>
-                <ClickableDiv ref={wrapperRef} onClick={() => handleClick('matches')}>
-                    <Milestone iconLabel='football' text='27'  />
-                </ClickableDiv>
-                <ClickableDiv ref={wrapperRef} onClick={() => handleClick('stadiums')}>
-                    <Milestone iconLabel='stadium' text='15'  />
-                </ClickableDiv>
-                <ClickableDiv ref={wrapperRef} onClick={() => handleClick('countries')}>
-                    <Milestone iconLabel='country' text='12'  />
-                </ClickableDiv>
+                <BoxTextStat number={35} title='Matches' />
+                <BoxTextStat number={24} title='Teams' />
+                <BoxTextStat number={17} title='Stadiums' />
+                <BoxTextStat number={12} title='Countries' />
             </MainContent>
-            {focusedStat && <ExpandedStatisticsSection>
-                {displayFocusedStat()}
-            </ExpandedStatisticsSection>}
         </StatisticsWrapper>
     )
-}
 
 export default StatisticsSection
