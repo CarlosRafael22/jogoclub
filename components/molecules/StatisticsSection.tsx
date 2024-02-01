@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import BoxTextStat from './BoxTextStat'
+import TextBoxStat from './TextBoxStat'
 
 const StatisticsWrapper = styled.div`
     width: 90%;
@@ -150,10 +150,10 @@ const CountriesSection = () => {
 const StatisticsSection = () => (
         <StatisticsWrapper>
             <MainContent>
-                <BoxTextStat number={35} title='Matches' />
-                <BoxTextStat number={24} title='Teams' />
-                <BoxTextStat number={17} title='Stadiums' />
-                <BoxTextStat number={12} title='Countries' />
+                <TextBoxStat number={35} title='Matches' />
+                <TextBoxStat number={24} title='Teams' />
+                <TextBoxStat number={17} title='Stadiums' />
+                <TextBoxStat number={12} title='Countries' />
             </MainContent>
         </StatisticsWrapper>
     )
