@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import TextBoxStat from './TextBoxStat/TextBoxStat'
+import TextBoxStat from './TextBoxStat'
 
 const StatisticsWrapper = styled.div`
     width: 90%;
