@@ -8,8 +8,10 @@ const TextBoxContainer = styled.div`
 `
 
 interface Props {
+    /** Stat number */
     number: number;
-    title: string
+    /** Stat title */
+    title: string;
 }
 
 const TextBoxStat = ({ number, title }: Props) => {
