@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const BoxTextContainer = styled.div`
+const TextBoxContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,13 +12,13 @@ interface Props {
     title: string
 }
 
-const BoxTextStat = ({ number, title }: Props) => {
+const TextBoxStat = ({ number, title }: Props) => {
     return (
-        <BoxTextContainer>
+        <TextBoxContainer>
             <p style={{ fontSize: '20px', fontWeight: 'bold' }}>{number}</p>
             <p style={{ fontSize: '12px' }}>{title}</p>
-        </BoxTextContainer>
+        </TextBoxContainer>
     )
 }
 
-export default BoxTextStat
+export default TextBoxStat
