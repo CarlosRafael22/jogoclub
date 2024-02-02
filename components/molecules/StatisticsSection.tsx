@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import TextBoxStat from './TextBoxStat'
+import CountTag from '@/atoms/CountTag'
 
 const StatisticsWrapper = styled.div`
     width: 90%;
@@ -154,6 +155,7 @@ const StatisticsSection = () => (
                 <TextBoxStat number={24} title='Teams' />
                 <TextBoxStat number={17} title='Stadiums' />
                 <TextBoxStat number={12} title='Countries' />
+                <CountTag number={12} />
             </MainContent>
         </StatisticsWrapper>
     )
