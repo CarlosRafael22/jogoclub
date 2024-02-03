@@ -41,7 +41,7 @@ const propertiesMapping = {
 const Text = styled.p<Props>`
   ${(props) => propertiesMapping[props.variant]}
   ${(props) => `text-align: ${props.align};`}
-  ${(props) => `${props.color} && color: ${props.color};`}
+  ${(props) => props.color && `color: ${props.color};`}
 `;
 
 const Typography = ({ variant, align = 'center', color, children }: Props) => (
