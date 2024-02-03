@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-type TypographyVariant = 'body1-regular' | 'body1-bold' | 'body2-regular' | 'body2-bold' | 'body3-regular' | 'body3-bold'
+type TypographyVariant = 'body1-regular' | 'body1-bold' | 'body2-regular' | 'body2-bold' | 'body3-regular' | 'body3-bold' | 'subtitle2-regular' | 'subtitle2-bold'
 type TypographyAlign = 'left' | 'center' | 'right'
 
 interface Props {
@@ -34,6 +34,14 @@ const propertiesMapping = {
     },
     'body3-bold': {
         'font-size': '10px',
+        'font-weight': 'bold'
+    },
+    'subtitle2-regular': {
+        'font-size': '20px',
+        'font-weight': 'normal'
+    },
+    'subtitle2-bold': {
+        'font-size': '20px',
         'font-weight': 'bold'
     }
 }
