@@ -1,7 +1,11 @@
 import styled from 'styled-components'
 import TextBoxStat from './TextBoxStat'
+import AllStatsSection from '@/organisms/AllStatsSection'
 
 const StatisticsWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
     width: 90%;
 `
 
@@ -147,6 +151,13 @@ const CountriesSection = () => {
     )
 }
 
+const TEAM_STATS = [
+    { team:'Bor. Mönchengladbach', number: 12 },
+    { team:'Bayern Munich', number: 167 },
+    { team:'Tottenham Hotspur', number: 9 },
+    { team:'Deportivo La Coruna', number: 1 }
+]
+
 const StatisticsSection = () => (
         <StatisticsWrapper>
             <MainContent>
@@ -155,6 +166,7 @@ const StatisticsSection = () => (
                 <TextBoxStat number={17} title='Stadiums' />
                 <TextBoxStat number={12} title='Countries' />
             </MainContent>
+            <AllStatsSection teamStats={TEAM_STATS} />
         </StatisticsWrapper>
     )
 
