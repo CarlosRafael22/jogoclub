@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Typography from '@/atoms/Typography'
 
 import CountTag from '@/atoms/CountTag'
 
@@ -14,11 +15,6 @@ const TeamStatCardContainer = styled.div`
     flex-shrink: 0;
 `
 
-const Text = styled.p`
-    font-size: 12px;
-    font-weight: bold;
-`
-
 export interface TeamStat {
     number: number
     team: string
@@ -27,7 +23,7 @@ export interface TeamStat {
 const TeamStatCard = ({ number, team }: TeamStat) => {
     return (
         <TeamStatCardContainer>
-            <Text>{team}</Text>
+            <Typography variant='body2-bold'>{team}</Typography>
             <CountTag number={number} />
         </TeamStatCardContainer>
     )

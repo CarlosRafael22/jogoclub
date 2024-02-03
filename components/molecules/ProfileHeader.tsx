@@ -1,20 +1,12 @@
 import styled from "styled-components";
 import RoundedImage from "@/atoms/RoundedImage";
+import Typography from "@/atoms/Typography";
 
-const Name = styled.p`
-    font-weight: 700;
-    font-size: 20px;
+const Name = styled(Typography)`
     margin-top: 4px;
 `
 
-const Username = styled.p`
-    font-weight: 700;
-    font-size: 16px;
-`
-
-const Description = styled.p`
-    font-weight: 700;
-    font-size: 14px;
+const Description = styled(Typography)`
     margin-top: 4px;
 `
 
@@ -28,9 +20,9 @@ const ProfileHeader = () => {
     return (
         <ProfileHeaderWrapper>
             <RoundedImage src="/assets/profile_page/profile.png" alt="Avatar" />
-            <Name>Rafael Leitao</Name>
-            <Username>@maisumdiadejogo</Username>
-            <Description>Futebol pela Alemanha e Europa #groundhopping</Description>
+            <Name variant="subtitle2-bold">Rafael Leitao</Name>
+            <Typography variant="body1-bold">@maisumdiadejogo</Typography>
+            <Description variant="body2-bold">Futebol pela Alemanha e Europa #groundhopping</Description>
         </ProfileHeaderWrapper>
     )
 }

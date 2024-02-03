@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Typography from '@/atoms/Typography'
 
 const TextBoxContainer = styled.div`
     display: flex;
@@ -17,8 +18,8 @@ interface Props {
 const TextBoxStat = ({ number, title }: Props) => {
     return (
         <TextBoxContainer>
-            <p style={{ fontSize: '20px', fontWeight: 'bold' }}>{number}</p>
-            <p style={{ fontSize: '12px' }}>{title}</p>
+            <Typography variant='subtitle2-bold'>{number}</Typography>
+            <Typography variant='body2-regular'>{title}</Typography>
         </TextBoxContainer>
     )
 }

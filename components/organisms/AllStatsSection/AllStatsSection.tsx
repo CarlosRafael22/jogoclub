@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import TeamStatSection from '../TeamStatSection'
 import { type TeamStat } from '@/molecules/TeamStatCard'
+import Typography from '@/atoms/Typography'
 import THEME from 'styles/theme'
 
 const AllStatsSectionWrapper = styled.div`
@@ -30,7 +31,7 @@ interface Props {
 const AllStatsSection = ({ teamStats }: Props) => {
     return (
         <AllStatsSectionWrapper>
-            <Text>{'All Stats >'}</Text>
+            <Typography variant='body1-bold' align='right' color={THEME.colors.primaryBlue}>{'All Stats >'}</Typography>
             <AllStatsSectionContainer>
                 <TeamStatSection teamStats={teamStats} />
             </AllStatsSectionContainer>
