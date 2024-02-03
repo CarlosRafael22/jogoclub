@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { type ComponentPropsWithoutRef } from 'react'
 import styled from 'styled-components'
 
 type TypographyVariant = 'body1-regular' | 'body1-bold' | 'body2-regular' | 'body2-bold' | 'body3-regular' | 'body3-bold' | 'subtitle2-regular' | 'subtitle2-bold'
 type TypographyAlign = 'left' | 'center' | 'right'
 
-interface Props {
+interface Props extends ComponentPropsWithoutRef<"input"> {
     variant: TypographyVariant
     align?: TypographyAlign
     color?: string
@@ -56,8 +56,8 @@ const Text = styled.p.withConfig({
   ${(props) => props.color && `color: ${props.color};`}
 `;
 
-const Typography = ({ variant, align = 'center', color, children }: Props) => (
-    <Text variant={variant} align={align} color={color}>{children}</Text>
+const Typography = ({ variant, align = 'center', color, children, ...restOfProps }: Props) => (
+    <Text variant={variant} align={align} color={color} {...restOfProps}>{children}</Text>
 )
 
 export default Typography
