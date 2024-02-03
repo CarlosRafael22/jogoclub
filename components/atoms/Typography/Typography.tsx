@@ -38,9 +38,13 @@ const propertiesMapping = {
     }
 }
 
-const Text = styled.p<Props>`
+const Text = styled.p.withConfig({
+    // To avoid "it looks like an unknown prop align is being sent through to the DOM"
+    // A prop that fails the test in shouldForwardProp isn't passed down
+    shouldForwardProp: (prop) => !["align", "variant"].includes(prop)
+  })<Props>`
   ${(props) => propertiesMapping[props.variant]}
-  ${(props) => `text-align: ${props.align};`}
+  text-align: ${props => props.align};
   ${(props) => props.color && `color: ${props.color};`}
 `;
 
