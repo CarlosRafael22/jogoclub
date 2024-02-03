@@ -27,7 +27,7 @@ const TeamStatSection = ({ teamStats }: Props) => {
     return (
         <TeamStatSectionContainer>
             {teamStats.map(stat => (
-                <TeamStatCard team={stat.team} number={stat.number} />
+                <TeamStatCard team={stat.team} number={stat.number} key={stat.team} />
             ))}
         </TeamStatSectionContainer>
     )
