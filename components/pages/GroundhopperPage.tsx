@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import ProfileHeader from "@/molecules/ProfileHeader";
 import SocialMediaSection from "@/molecules/SocialMediaSection";
-import StatisticsSection from "@/molecules/StatisticsSection";
+import ProfilePageStatsSection from "@/organisms/ProfilePageStatsSection";
 import UpcomingMatchesSection from "@/organisms/UpcomingMatchesSection";
+import { DEVICES } from "styles/theme";
 
 const Container = styled.div`
     display: flex;
@@ -10,6 +11,20 @@ const Container = styled.div`
     flex-direction: column;
     margin-top: 16px;
     background-color: #f4f4f4;
+
+    @media ${DEVICES.xxl} {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    @media ${DEVICES.xl} {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    @media ${DEVICES.sm} {
+        width: 100%;
+    }
 `
 
 const GroundhopperPage = () => {
@@ -17,7 +32,7 @@ const GroundhopperPage = () => {
         <Container>
             <ProfileHeader />
             <SocialMediaSection />
-            <StatisticsSection />
+            <ProfilePageStatsSection />
             <UpcomingMatchesSection />
         </Container>
     );

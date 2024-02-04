@@ -1,8 +1,14 @@
 export const TEAM_STATS = [
     { team:'Bor. Mönchengladbach', number: 12 },
-    { team:'Bayern Munich', number: 167 },
+    { team:'FC Bayern Munich', number: 167 },
+    { team:'FC Bayern Munich Women', number: 3 },
+    { team:'Manchester City', number: 2 },
     { team:'Tottenham Hotspur', number: 9 },
-    { team:'Deportivo La Coruna', number: 1 }
+    { team:'Brighton & Hove Albion', number: 1 },
+    { team:'Arsenal FC Women', number: 1 },
+    { team:'Brazil Women', number: 1 },
+    { team:'AC Milan', number: 1 },
+    { team:'Sevilla FC', number: 3 }
 ]
 
 export const STADIUM_STATS = [
@@ -15,6 +21,10 @@ export const STADIUM_STATS = [
     { stadium:'Allianz Arena', location: 'Munich, Germany 🇩🇪', number: 1101 },
     { stadium:'Parc des Princes', location: 'Paris, France', number: 1 },
     { stadium:'Stamford Bridge', location: 'London, England', number: 12 },
+    { stadium:'Sportpark Unterhaching', location: 'Munich, Germany', number: 1 },
+    { stadium:'Camp Nou', location: 'Barcelona, Spain', number: 1 },
+    { stadium:'Atatürk Stadium', location: 'Istambul, Turkey', number: 1 },
+    { stadium:'Estádio do Arruda', location: 'Recife, Brazil', number: 10 },
 ]
 
 export const COUNTRIES = [
