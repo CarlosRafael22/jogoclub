@@ -16,3 +16,13 @@ export const STADIUM_STATS = [
     { stadium:'Parc des Princes', location: 'Paris, France', number: 1 },
     { stadium:'Stamford Bridge', location: 'London, England', number: 12 },
 ]
+
+export const COUNTRIES = [
+    { country: 'Portugal' },
+    { country: 'Brazil' },
+    { country: 'England' },
+    { country: 'Germany' },
+    { country: 'France' },
+    { country: 'Spain' },
+    { country: 'Croatia' }
+]

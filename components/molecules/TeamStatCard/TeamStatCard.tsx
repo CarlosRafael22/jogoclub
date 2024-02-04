@@ -23,7 +23,7 @@ export interface TeamStat {
 const TeamStatCard = ({ number, team }: TeamStat) => {
     return (
         <TeamStatCardContainer>
-            <Typography variant='body2-bold'>{team}</Typography>
+            <Typography variant='body1-bold'>{team}</Typography>
             <CountTag number={number} />
         </TeamStatCardContainer>
     )
