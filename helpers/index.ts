@@ -12,7 +12,7 @@ export const getDateFromDDMMYYYY = (dateString: string) => {
     return new Date(+year, +month - 1, +day)
 }
 
-export const getFlagEmoji = (countryCode: string) => {
+export const getFlagEmoji = (countryCode: string | undefined): string | null => {
     const codePoints = countryCode
       ?.toUpperCase()
       .split('')
@@ -23,4 +23,4 @@ export const getFlagEmoji = (countryCode: string) => {
 }
 
 /** Returns the ISO Alpha-2 code for the country */
-export const getCountryCode = (country: string) => COUNTRY_CODE_LIST.find(countryObj => countryObj.name === country)?.code
+export const getCountryCode = (country: string | undefined): string | undefined => COUNTRY_CODE_LIST.find(countryObj => countryObj.name === country)?.code
