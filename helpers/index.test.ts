@@ -10,7 +10,9 @@ describe('getCountryCode', () => {
         ['Morocco', 'MA'],
         ['England', undefined],
         ['Scotland', undefined],
-        ['', undefined]
+        ['', undefined],
+        [undefined, undefined],
+        [null, undefined]
     ]
 
     test.each(testCases)('should return the correct code for %s', (country, expectedCode) => {
@@ -28,7 +30,9 @@ describe('getFlagEmoji', () => {
         ['NL', '🇳🇱'],
         ['XA', '🇽🇦'],
         ['EN', '🇪🇳'],
-        ['', '']
+        ['', ''],
+        [undefined, null],
+        [null, null]
     ]
 
     test.each(testCases)('should return the correct flag for %s', (country, expectedFlag) => {
