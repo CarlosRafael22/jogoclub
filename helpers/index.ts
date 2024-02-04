@@ -1,4 +1,4 @@
-import { COUNTRY_CODE_LIST } from "const/countryList"
+import { COUNTRY_CODE_LIST } from "../const/countryList"
 
 const WEEK_DAYS = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado']
 
