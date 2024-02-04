@@ -11,7 +11,7 @@ const TeamStatCardContainer = styled.div`
     border-radius: 6px;
     background-color: white;
     width: max-content;
-    padding: 4px;
+    padding: 4px 8px;
     flex-shrink: 0;
 `
 
