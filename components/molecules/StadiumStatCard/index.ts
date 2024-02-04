@@ -1,0 +1,1 @@
+export { default, type StadiumStat } from './StadiumStatCard'
