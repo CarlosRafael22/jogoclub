@@ -7,13 +7,13 @@ import CountTag from '@/atoms/CountTag'
 const StadiumStatCardContainer = styled.div`
     display: flex;
     align-items: flex-end;
-    gap: 16px;
+    gap: 8px;
     border-radius: 6px;
     background-color: white;
     width: max-content;
     padding: 8px;
     flex-shrink: 0;
-    height: 80px;
+    height: 90px;
 `
 
 const StadiumInfoContainer = styled.div`
@@ -28,6 +28,17 @@ const StadiumInfoContainer = styled.div`
 
 const StadiumName = styled(Typography)`
     line-height: 18px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
+`
+
+const StadiumLocation = styled(Typography)`
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 `
 
 export interface StadiumStat {
@@ -41,7 +52,7 @@ const StadiumStatCard = ({ number, stadium, location }: StadiumStat) => {
         <StadiumStatCardContainer>
             <StadiumInfoContainer>
                 <StadiumName variant='body1-bold' align='left'>{stadium}</StadiumName>
-                <Typography variant='body2-regular' align='left'>{location}</Typography>
+                <StadiumLocation variant='body2-regular' align='left'>{location}</StadiumLocation>
             </StadiumInfoContainer>
             <CountTag number={number} />
         </StadiumStatCardContainer>
