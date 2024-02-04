@@ -6,7 +6,7 @@ export const TEAM_STATS = [
 ]
 
 export const STADIUM_STATS = [
-    { stadium:'Estádio do Sport Lisboa e Benfica', location: 'Lisboa, Portugal', number: 1 },
+    { stadium:'Estádio do Sport Lisboa e Benfica', location: 'Lisboa, Portugal 🇵🇹', number: 1 },
     { stadium:'Estádio Municipal José Bento Pessoa', location: 'Figueira da Foz, Portugal', number: 1 },
     { stadium:'Estádio do Clube Desportivo das Aves', location: 'Vila das Aves - Santo Tirso, Portugal', number: 135 },
     { stadium:'Parque Desportivo Comendador Joaquim Almeida Freitas', location: 'Moreira de Cónegos -Guimarães, Portugal', number: 1 },
