@@ -6,7 +6,8 @@
       "@/molecules/*": ["components/molecules/*"],
       "@/organisms/*": ["components/organisms/*"],
       "@/pages/*": ["components/pages/*"],
-      "@/helpers/*": ["helper/*"]
+      "@/helpers/*": ["helper/*"],
+      "@/interfaces/*": ["interfaces/*"],
     },
     "target": "es5",
     "module": "esnext",
