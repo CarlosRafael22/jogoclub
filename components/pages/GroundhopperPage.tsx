@@ -26,6 +26,7 @@ const Container = styled.div`
         width: 100%;
     }
 `
+const matches = []
 
 const GroundhopperPage = () => {
     return (
@@ -33,7 +34,7 @@ const GroundhopperPage = () => {
             <ProfileHeader />
             <SocialMediaSection />
             <ProfilePageStatsSection />
-            <UpcomingMatchesSection />
+            <UpcomingMatchesSection upcomingMatches={matches} previousMatches={matches} />
         </Container>
     );
 }
