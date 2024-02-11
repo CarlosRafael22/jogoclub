@@ -36,3 +36,18 @@ export const COUNTRIES = [
     { country: 'Spain' },
     { country: 'Croatia' }
 ]
+
+export const UPCOMING_MATCHES = [
+    {
+        date: "23/02/2024",
+        homeTeam: "Manchester United",
+        homeTeamScore: null,
+        homeTeamPenaltyScore: null,
+        awayTeam: "Wolverhampton Wanderers",
+        awayTeamScore: null,
+        awayTeamPenaltyScore: null,
+        competition: 'Premier League',
+        stadium: 'Old Trafford',
+        image: null
+    }
+]
