@@ -1,18 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 import Typography from '@/atoms/Typography'
+import Card from '@/atoms/Card'
 
 import CountTag from '@/atoms/CountTag'
 
-const StadiumStatCardContainer = styled.div`
+const StadiumStatCardContainer = styled(Card)`
     display: flex;
     align-items: flex-end;
-    gap: 8px;
-    border-radius: 6px;
-    background-color: white;
-    width: max-content;
-    padding: 8px;
     flex-shrink: 0;
+    gap: 8px;
+    padding: 8px;
     height: 90px;
 `
 
