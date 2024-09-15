@@ -8,7 +8,7 @@ interface Props {
 
 const InteractionCount = ({ name, count }: Props) => {
     return (
-        <div className='flex flex-row gap-2'>
+        <div className='flex flex-row gap-1'>
             <Icon name={name} />
             {!!count && <p>{count}</p>}
         </div>
