@@ -13,28 +13,21 @@ export default meta
 
 type Story = StoryObj<typeof TaggedProfiles>
 
-const RenderFunction = {
-    render: (args) => (
-        <div className='w-80'>
-            <TaggedProfiles {...args} />
-        </div>
-    )
-}
+const Template = (args) => (
+    <div className='w-80'>
+        <TaggedProfiles {...args} />
+    </div>
+);
 
-export const Primary: Story = {
-    ...RenderFunction,
-    args: {
-        profiles: mockedTaggedProfiles,
-    },
-    
-}
+export const Primary: Story = Template.bind({});
+Primary.args = {
+    profiles: mockedTaggedProfiles,
+};
 
-export const ProfilesAboveThreshold: Story = {
-    ...RenderFunction,
-    args: {
-        profiles: [
-            ...mockedTaggedProfiles,
-            ...mockedTaggedProfiles
-        ],
-    }
-}
+export const ProfilesAboveThreshold: Story = Template.bind({});
+ProfilesAboveThreshold.args = {
+    profiles: [
+        ...mockedTaggedProfiles,
+        ...mockedTaggedProfiles
+    ],
+};
