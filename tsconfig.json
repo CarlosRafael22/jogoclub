@@ -8,6 +8,7 @@
       "@/pages/*": ["components/pages/*"],
       "@/helpers/*": ["helper/*"],
       "@/interfaces/*": ["interfaces/*"],
+      "@/mocks/*": ["mocks/*"]
     },
     "target": "es5",
     "module": "esnext",
