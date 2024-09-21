@@ -1,49 +1,33 @@
 import React from 'react'
-import styled from 'styled-components'
 
 import Typography from '@/atoms/Typography'
+import MatchCard from '@/molecules/MatchCard'
+import { type BasicMatchInfo } from 'entities/models/match'
 import THEME from 'styles/theme'
 import Match from '@/interfaces/match'
 
-const UpcomingMatchesSectionWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    margin-top: 48px;
-`
-
-const UpcomingMatchesSectionContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    padding: 8px 0px;
-    border-top: 2px solid white;
-`
-
-const UpcomingMatchesList = styled.div`
-    margin-top: 16px;
-`
-
 interface Props {
-    upcomingMatches: Match[]
+    upcomingMatches: BasicMatchInfo[]
     previousMatches: Match[]
 }
 
 const UpcomingMatchesSection = ({ upcomingMatches, previousMatches }: Props) => {
     return (
-        <UpcomingMatchesSectionWrapper>
+        <div className='flex flex-col mt-12 w-[90%]'>
             <Typography variant='body1-bold' align='right' color={THEME.colors.primaryBlue}>{`All Matches (${previousMatches.length}) >`}</Typography>
-            <UpcomingMatchesSectionContainer>
+            <div className='flex flex-col gap-2 py-2 border-t-2 border-s-white'>
                 <Typography variant='subtitle2-bold' align='left'>Upcoming Matches</Typography>
-                <UpcomingMatchesList>
+                <div className='flex flex-col items-center mt-4 gap-4'>
                     {upcomingMatches.length > 0 ? (
-                        <div>Matches coming</div>
+                        upcomingMatches.map(match => (
+                            <MatchCard {...match} />
+                        ))
                     ) : (
                         <Typography variant='body1-bold'>No matches scheduled to go.</Typography>
                     )}
-                </UpcomingMatchesList>
-            </UpcomingMatchesSectionContainer>
-        </UpcomingMatchesSectionWrapper>
+                </div>
+            </div>
+        </div>
     )
 }
 
