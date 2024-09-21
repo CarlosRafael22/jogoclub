@@ -1,4 +1,4 @@
-export type TeamScoreInfo = {
+export type BasicTeamIdentity = {
     name: string;
     code: string;
     logoUrl: string;
