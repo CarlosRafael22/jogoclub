@@ -23,4 +23,29 @@ export const getFlagEmoji = (countryCode: string | undefined): string | null => 
 }
 
 /** Returns the ISO Alpha-2 code for the country */
-export const getCountryCode = (country: string | undefined): string | undefined => COUNTRY_CODE_LIST.find(countryObj => countryObj.name === country)?.code
+export const getCountryCode = (country: string | undefined): string | undefined => COUNTRY_CODE_LIST.find(countryObj => countryObj.name === country)?.code;
+
+export const getFormattedDateAndHourFromDateString = (initialDateString: string): [formmattedDate: string, formmattedHour: string] => {
+    const dateObject = new Date(Date.parse(initialDateString));
+
+    const optionsDate = {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+    } as const;
+
+    const optionsHour = {
+        hour: 'numeric',
+        minute: "numeric",
+    } as const;
+
+    const formatterDate = new Intl.DateTimeFormat("en-GB", optionsDate);
+    const formattedDate = formatterDate.format(dateObject);
+
+    const formatterHour = new Intl.DateTimeFormat("en-GB", optionsHour);
+    const formattedHour = formatterHour.format(dateObject);
+    return [formattedDate, formattedHour];
+}
+
+export const getHourText = (hour: string) => hour.replace(':00', '').concat('h');
