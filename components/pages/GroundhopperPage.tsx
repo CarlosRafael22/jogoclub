@@ -3,6 +3,7 @@ import ProfileHeader from "@/molecules/ProfileHeader";
 import SocialMediaSection from "@/molecules/SocialMediaSection";
 import ProfilePageStatsSection from "@/organisms/ProfilePageStatsSection";
 import UpcomingMatchesSection from "@/organisms/UpcomingMatchesSection";
+import { mockedUpcomingMatch } from "@/mocks/match";
 import { DEVICES } from "styles/theme";
 
 const Container = styled.div`
@@ -34,7 +35,7 @@ const GroundhopperPage = () => {
             <ProfileHeader />
             <SocialMediaSection />
             <ProfilePageStatsSection />
-            <UpcomingMatchesSection upcomingMatches={matches} previousMatches={matches} />
+            <UpcomingMatchesSection upcomingMatches={Array(4).fill(mockedUpcomingMatch)} previousMatches={matches} />
         </Container>
     );
 }

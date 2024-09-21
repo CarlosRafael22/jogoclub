@@ -15,7 +15,13 @@ export const mockedMatchScoreWithKickoff = {
     ...mockedHomeAndAwayTeam,
     kickoff: "2024-02-26T19:00:00Z",
     scoreInfo: null
-}
+};
+
+export const mockedUpcomingMatch = {
+    ...mockedMatchScoreWithKickoff,
+    competition: "Bundesliga",
+    stadium: "Allianz Arena"
+};
 
 export const mockedMatchScoreInfo = {
     ...mockedHomeAndAwayTeam,
@@ -24,4 +30,4 @@ export const mockedMatchScoreInfo = {
         homeTeamScore: 2,
         awayTeamScore: 1
     }
-}
+};
