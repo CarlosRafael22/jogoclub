@@ -1,4 +1,4 @@
-const homeAndAwayTeam = {
+export const mockedHomeAndAwayTeam = {
     homeTeam: {
         name: 'FC Bayern Munich',
         code: 'BAY',
@@ -12,13 +12,13 @@ const homeAndAwayTeam = {
 };
 
 export const mockedMatchScoreWithKickoff = {
-    ...homeAndAwayTeam,
+    ...mockedHomeAndAwayTeam,
     kickoff: "2024-02-26T19:00:00Z",
     scoreInfo: null
 }
 
 export const mockedMatchScoreInfo = {
-    ...homeAndAwayTeam,
+    ...mockedHomeAndAwayTeam,
     kickoff: "2024-02-26T19:00:00Z",
     scoreInfo: {
         homeTeamScore: 2,
