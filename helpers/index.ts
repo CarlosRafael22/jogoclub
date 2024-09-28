@@ -41,7 +41,9 @@ export const getFormattedDateAndHourFromDateString = (initialDateString: string)
     } as const;
 
     const formatterDate = new Intl.DateTimeFormat("en-GB", optionsDate);
-    const formattedDate = formatterDate.format(dateObject);
+    const formattedParts = formatterDate.formatToParts(dateObject);
+    const [weekday, month, day, year] = formattedParts.filter(({ type }) => type !== 'literal');
+    const formattedDate = `${weekday.value}, ${month.value} ${day.value} - ${year.value}`;
 
     const formatterHour = new Intl.DateTimeFormat("en-GB", optionsHour);
     const formattedHour = formatterHour.format(dateObject);
